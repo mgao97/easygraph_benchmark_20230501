@@ -8,7 +8,8 @@ Purpose: Why not?
 import argparse
 from pathlib import Path
 import networkx as nx
-# from config import edgelist_filenames
+import numpy as np
+import os
 
 def load_un_graph(filename):
     return nx.read_edgelist(filename, delimiter="\t", nodetype=int, create_using=nx.Graph)
@@ -27,51 +28,42 @@ def write_graph(g: nx.Graph, path: str):
     nx.write_edgelist(g, path, delimiter="\t", data=False)
 
 
-
-def get_args():
-    """Get command-line arguments"""
-
-    parser = argparse.ArgumentParser(
-        description='Why not?',
-        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-
-
-
-
-    return parser.parse_args()
-
+def pre_data(path, file):
+    # print(file)
+    data = np.loadtxt(path+file,usecols=(0,1))
+    np.savetxt(path+file, data, fmt='%i')
+    return path+file
 
 def main():
-    """Make a jazz noise here"""
-    edgelist_filenames = [
-         "/users/gtc/eg/easygraph-bench/directed_dataset/amazon0302.txt",
-                "/users/gtc/eg/easygraph-bench/directed_dataset/pgp.edgelist",
-                "/users/gtc/eg/easygraph-bench/directed_dataset/soc-Epinions1.txt",
-                "/users/gtc/eg/easygraph-bench/directed_dataset/wiki-Vote.txt",
-              "/users/gtc/eg/easygraph-bench/directed_dataset/p2p-Gnutella04.txt",
-                "/users/gtc/eg/easygraph-bench/directed_dataset/web-NotreDame.txt",
-                "/users/gtc/eg/easygraph-bench/directed_dataset/email-EuAll.txt",
-                "/users/gtc/eg/easygraph-bench/directed_dataset/soc-Slashdot0811.txt",
-                "/users/gtc/eg/easygraph-bench/directed_dataset/amazon0601.txt",
-                "/users/gtc/eg/easygraph-bench/directed_dataset/soc-pokec-relationships.txt",
-    ]
+    u_filepath = 'datasets/undirected_datasets/'
+    u_filelist = os.listdir(u_filepath)
+    print(u_filelist)
+
+    d_filepath = 'datasets/directed_datasets/'
+    d_filelist = os.listdir(d_filepath)
+    print(d_filelist)
     
-    un_edgelist_filenames=["/users/gtc/eg/easygraph-bench/undirected_datasets/ca-HepTh.txt",
-                "/users/gtc/eg/easygraph-bench/undirected_datasets/email-Enron.txt",
-                "/users/gtc/eg/easygraph-bench/undirected_datasets/lastfm_asia_edges.txt",
-                "/users/gtc/eg/easygraph-bench/undirected_datasets/ca-HepPh.txt",
-                "/users/gtc/eg/easygraph-bench/undirected_datasets/ca-CondMat.txt",]
-    args = get_args()
-    for filename in un_edgelist_filenames:
-        new_path = Path(filename).with_stem(f"{Path(filename).stem}_lcc")
+    print('get lcc of undirected network datasets..............')
+    for file in u_filepath:
+        new_path = Path(file).with_stem(f"{Path(file).stem}_lcc")
         if new_path.exists():
             continue
-        # g = load_graph(filename)
-        g = load_un_graph(filename)
-        # lcc = get_lcc(g)
+        g = load_un_graph(file)
+        
         lcc = get_un_lcc(g)
         write_graph(lcc, str(new_path))
-        print(f'Converted {filename} to {new_path}')
+        print(f'Converted {file} to {new_path}')
+
+    print('get lcc of directed network datasets..............')
+    for file in d_filepath:
+        new_path = Path(file).with_stem(f"{Path(file).stem}_lcc")
+        if new_path.exists():
+            continue
+        g = load_un_graph(file)
+        
+        lcc = get_lcc(g)
+        write_graph(lcc, str(new_path))
+        print(f'Converted {file} to {new_path}')
 
 
 if __name__ == '__main__':
