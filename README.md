@@ -1,0 +1,2 @@
+# easygraph_benchmark_20230501
+benchmark results
