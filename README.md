@@ -70,29 +70,30 @@ The specific way the function is called is shown in the following .yml file
 
   ```yaml
 
-  easygraph(version:0.2a47):
-  	'"import easygraph as eg'"
-  	loading(undirected): "'eg.GraphC().add_edges_from_file(filename, weighted=False,is_transform=True)'"
-    loading(directed): "'eg.DiGraphC().add_edges_from_file(filename, weighted=False,is_transform=True)'"
-    pagerank: "'eg.pagerank(g,alpha=0.85)'"
-    shortest path: "'eg.multi_source_dijkstra(g, sources = eg_node_list)'"
-    connected_components(undirected): '"eg.connected_components(g)'"
-   	connected_components(directed): '"eg.strongly_connected_components(g)'"
-   	closeness: '"eg.closeness_centrality(g, sources = eg_node_list)'"
-   	betweenness: '"eg.betweenness_centrality(g)'"
-   	k-core: '"eg.k_core(g)'"
+  easygraph(version:0.2a47): 
+  '"import easygraph as eg"'
+  
+  loading(undirected): "'eg.GraphC().add_edges_from_file(filename, weighted=False,is_transform=True)'"
+  loading(directed): "'eg.DiGraphC().add_edges_from_file(filename, weighted=False,is_transform=True)'"
+  pagerank: "'eg.pagerank(g,alpha=0.85)'"
+  shortest path: "'eg.multi_source_dijkstra(g, sources = eg_node_list)'"
+  connected_components(undirected): "'eg.connected_components(g)'"
+  connected_components(directed): "'eg.strongly_connected_components(g)'"
+  closeness: "'eg.closeness_centrality(g, sources = eg_node_list)'"
+  betweenness: "'eg.betweenness_centrality(g)'"
+  k-core: "'eg.k_core(g)'"
    
  
-    igraph(version:0.10.4):
-    loading(undirected): "'ig.Graph.Read_Edgelist(filename, False)'"
-    loading(directed): '"ig.Graph.Read_Edgelist(filename, True)"'
-    pagerank: '"g.pagerank(damping=0.85)"'
-    shortest path: '"g.distances(source = ig_node_list,weights=[1]*len(g.es))"'
-    connected components: '"g.connected_components()"'
-    k-core: '"g.coreness()"'
-    closeness: '"g.closeness_centrality(g, weights=[1]*len(g.es), sources = ig_node_list)'"
-   	betweenness(directed): '"g.betweenness(directed=True, weights=[1]*len(g.es))'"
-   	betweenness(undirected): '"g.betweenness(directed=False, weights=[1]*len(g.es))'"
+  igraph(version:0.10.4):
+  loading(undirected): "'ig.Graph.Read_Edgelist(filename, False)'"
+  loading(directed): '"ig.Graph.Read_Edgelist(filename, True)"'
+  pagerank: '"g.pagerank(damping=0.85)"'
+  shortest path: '"g.distances(source = ig_node_list,weights=[1]*len(g.es))"'
+  connected components: '"g.connected_components()"'
+  k-core: '"g.coreness()"'
+  closeness: '"g.closeness_centrality(g, weights=[1]*len(g.es), sources = ig_node_list)"'
+  betweenness(directed): '"g.betweenness(directed=True, weights=[1]*len(g.es))"'
+  betweenness(undirected): "'g.betweenness(directed=False, weights=[1]*len(g.es))'"
 
 
     
