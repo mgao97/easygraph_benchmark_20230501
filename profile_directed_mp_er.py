@@ -41,7 +41,7 @@ if __name__ == "__main__":
         print("=================")
         print()
 
-        g = erdos_renyi_M(size, edge=m, directed=False)
+        g = erdos_renyi_M(size, edge=m, directed=True)
         print('*************directed=False****************')
             
         worker_list = [8, 16]

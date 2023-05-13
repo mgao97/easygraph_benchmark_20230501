@@ -67,6 +67,12 @@ if __name__ == "__main__":
             print()
             benchmark('eg.k_core(g)', globals=globals(), n=n)
 
+            print("Profiling pagerank")
+            print("=======================")
+            print()
+            benchmark('eg.pagerank(g,alpha=0.85)', globals=globals(), n=n)
+
+
             print("========betweenness_centrality=======")
             print("=================")
             print()
@@ -101,6 +107,12 @@ if __name__ == "__main__":
             print("=================")
             print()
             benchmark('g.coreness()', globals=globals(), n=n)
+
+            print("Profiling pagerank")
+            print("=======================")
+            print()
+            benchmark('g.pagerank(damping=0.85)', globals=globals(), n=n)
+
             print("========betweenness_centrality=======")
             print("=================")
             print()
