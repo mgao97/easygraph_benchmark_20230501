@@ -34,9 +34,10 @@ if __name__ == "__main__":
         if file == '.DS_Store':
             continue
         
+        # =======================EasyGraph=======================
         filename = filepath + file    
         print(f"Profiling dataset {file}")
-
+        
         print("Profiling loading")
         print("=================")
         print()
@@ -79,7 +80,7 @@ if __name__ == "__main__":
         
 
 
-        # =======================igraph
+        # =======================igraph=======================
         print(f"Profiling dataset {file}")
 
         print("Profiling loading")
