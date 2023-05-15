@@ -96,7 +96,24 @@ The specific way the function is called is shown in the following file
 
 ```
 
+### For Objective 2
 
+We compare EasyGraph with different number of workers. 
+
+The specific way the function is called is shown in the following file
+
+
+
+```  easygraph(version:0.2a47): 
+  '"import easygraph as eg"'
+  loading(undirected): "'g = erdos_renyi_M(size, edge=m, directed=False)'"
+  loading(directed): "'g = erdos_renyi_M(size, edge=m, directed=True)'"
+  hierarchy: "'eg.hierarchy(g, n_workers=n_workers)'"
+  clustering: "'eg.clustering(g, n_workers=n_workers)'"
+  closeness: "'eg.closeness_centrality(g, sources = eg_node_list)'"
+  betweenness: "'eg.betweenness_centrality(g)'"
+
+```
 
 
 
@@ -111,8 +128,17 @@ The specific way the function is called is shown in the following file
 
 First, to run these scripts, you need to clone the repo.
 
-To install `EasyGraph`:  
-If prebuilt easygraph wheels are not supported for your platform, and you need to build it yourself and install the module by running the following code.
+To install `EasyGraph`:
+
+Installation with pip
+
+```bash
+pip install Python-EasyGraph
+```
+
+Install from scratch
+
+You will need to build EasyGraph wheels from scratch if your platform does not support them. Please run the following code to install the module.
 
 ```bash
 git clone https://github.com/easy-graph/Easy-Graph && cd Easy-Graph && git checkout pybind11
@@ -129,7 +155,7 @@ To install the igraph library, please refer to https://python.igraph.org/en/stab
 
 Iteration:  3 times for directed network datasets, 5 times for undirected network datasets.
 
-Node sample: 1,000 nodes are sampled from directed network datasets when testing the algorithm of identificsation of the shortest paths and the metric of closeness centrality.
+Node sample: 1,000 nodes are sampled from directed network datasets when testing the algorithm of identification of the shortest paths and the metric of closeness centrality.
 
  Subgraph generation: the largest connected components/strongly connected components are calculated by NetworkX, code is presented in get_lcc_edgelist.py
 
@@ -145,7 +171,7 @@ Node sample: 1,000 nodes are sampled from directed network datasets when testing
 
 cd easygraph_benchmark_20230501
 
-There are following scripts in this directory：
+There are the following scripts in this directory：
 
 ```
 benchmark.py // tool for calculating the time consumption of each function
