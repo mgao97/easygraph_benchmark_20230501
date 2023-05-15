@@ -222,7 +222,7 @@ The `er_*` Erdos-Renyi random graphs are generated with `eg.erdos_renyi_M()` wit
 | [amazon0302](http://snap.stanford.edu/data/amazon0302.html)  | 262,111  | 1,234,877 | True        | 9.42           | 1.79e-05 |
 | [soc-Epinions1](http://snap.stanford.edu/data/soc-Epinions1.html) | 75,879   | 508,837  | True        | 13.41          | 8.8e−05  |
 | [wikivote](http://snap.stanford.edu/data/wiki-Vote.html)     | 7,115    | 103,689  | True        | 29.15          | 0.0020   |
-| pgp.edgelist                                                 | 39,796   | 301,498  | True        | 15.15          | 0.0002   |
+| [pgp.edgelist](https://github.com/easy-graph/easygraph-bench/blob/master/dataset/pgp.edgelist)                                                | 39,796   | 301,498  | True        | 15.15          | 0.0002   |
 | [p2p-Gnutella04](http://snap.stanford.edu/data/p2p-Gnutella04.html) | 10,876   | 39,994   | True        | 7.35           | 0.0003   |
 | [soc-Slashdot0811](http://snap.stanford.edu/data/soc-Slashdot0811.html) | 77,360   | 905,468  | True        | 23.41          | 0.0002   |
 | [web-NotreDame](http://snap.stanford.edu/data/web-NotreDame.html) | 325,729  | 1,497,134 | True        | 9.19           | 1.5e−07  |
