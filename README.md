@@ -207,14 +207,14 @@ The `er_*` Erdos-Renyi random graphs are generated with `eg.erdos_renyi_M()` wit
 
 | Dataset Name                                                 | nodes   | edges   | is_directed | average_degree | density  |
 | ------------------------------------------------------------ | ------- | ------- | ----------- | -------------- | -------- |
-| ER\_10k\_u                                                   | 10,000  | 20,000  | False       | 4.0            | 5.0e-05  |
-| ER\_50k\_u                                                   | 50,000 | 100,000 | False       | 4.0            | 1.0e-05  |
-| ER_100k_u                                                    | 100,000 | 200,000 | False       | 4.0            | 5.0e-06  |
-| ER_200k_u                                                    | 200,000 | 400,000 | False       | 4.0            | 2.5e-06  |
-| ER_10k_d                                                     | 10,000  | 20,000  | True        | 4.0            | 2.5e-05  |
-| ER_50k_d                                                     | 50,000  | 100,000  | True        | 4.0            | 5.0e-06  |
-| ER_100k_d                                                    | 100,000 | 200,000 | True        | 4.0            | 2.5e-06  |
-| ER_200k_d                                                    | 200,000 | 400,000 | True        | 4.0            | 1.25e-06 |
+| ER\_10k\_u                                                   | 10,000  | 20,000  | False       | 4.0            | 0.0004   |
+| ER\_50k\_u                                                   | 50,000 | 100,000 | False       | 4.0            | 8.0e-05  |
+| ER_100k_u                                                    | 100,000 | 200,000 | False       | 4.0            | 4.0e-05  |
+| ER_200k_u                                                    | 200,000 | 400,000 | False       | 4.0            | 2.0e-05  |
+| ER_10k_d                                                     | 10,000  | 20,000  | True        | 4.0            | 0.0002   |
+| ER_50k_d                                                     | 50,000  | 100,000  | True        | 4.0            | 4.0e-05  |
+| ER_100k_d                                                    | 100,000 | 200,000 | True        | 4.0            | 2.0e-05  |
+| ER_200k_d                                                    | 200,000 | 400,000 | True        | 4.0            | 1.0e-05 |
 | [ca-HepTh](http://snap.stanford.edu/data/ca-HepTh.html)      | 9,877    | 25,998   | False       | 5.26           | 0.0005   |
 | [email-Enron](http://snap.stanford.edu/data/email-Enron.html) | 36,692   | 183,831  | False       | 10.02          | 0.0003   |
 | [ca-HepPh](http://snap.stanford.edu/data/ca-HepPh.html)      | 12,008   | 118,521  | False       | 19.74          | 0.0016   |
