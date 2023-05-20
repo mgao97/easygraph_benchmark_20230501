@@ -217,9 +217,9 @@ The `er_*` Erdos-Renyi random graphs are generated with `eg.erdos_renyi_M()` wit
 | ER_200k_d                                                    | 200,000 | 400,000 | True        | 4.0            | 1.0e-05 |
 | [ca-HepTh](http://snap.stanford.edu/data/ca-HepTh.html)      | 9,877    | 25,998   | False       | 5.26           | 0.0005   |
 | [email-Enron](http://snap.stanford.edu/data/email-Enron.html) | 36,692   | 183,831  | False       | 10.02          | 0.0003   |
+| [lastfm](https://snap.stanford.edu/data/feather-lastfm-social.html) | 7,624   | 27,806  | False       | 7.2943          | 0.0010   |
 | [ca-HepPh](http://snap.stanford.edu/data/ca-HepPh.html)      | 12,008   | 118,521  | False       | 19.74          | 0.0016   |
 | [ca-CondMat](http://snap.stanford.edu/data/ca-CondMat.html)  | 23,133   | 93,497   | False       | 8.08           | 0.0003   |
-| [amazon0302](http://snap.stanford.edu/data/amazon0302.html)  | 262,111  | 1,234,877 | True        | 9.42           | 1.79e-05 |
 | [soc-Epinions1](http://snap.stanford.edu/data/soc-Epinions1.html) | 75,879   | 508,837  | True        | 13.41          | 8.8e−05  |
 | [wikivote](http://snap.stanford.edu/data/wiki-Vote.html)     | 7,115    | 103,689  | True        | 29.15          | 0.0020   |
 | [pgp.edgelist](https://github.com/easy-graph/easygraph-bench/blob/master/dataset/pgp.edgelist)                                                | 39,796   | 301,498  | True        | 15.15          | 0.0002   |
