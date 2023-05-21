@@ -217,7 +217,7 @@ The `er_*` Erdos-Renyi random graphs are generated with `eg.erdos_renyi_M()` wit
 | ER_200k_d                                                    | 200,000 | 400,000 | True        | 4.0            | 1.0e-05 |
 | [ca-HepTh](http://snap.stanford.edu/data/ca-HepTh.html)      | 9,877    | 25,998   | False       | 5.26           | 0.0005   |
 | [email-Enron](http://snap.stanford.edu/data/email-Enron.html) | 36,692   | 183,831  | False       | 10.02          | 0.0003   |
-| [lastfm](https://snap.stanford.edu/data/feather-lastfm-social.html) | 7,624   | 27,806  | False       | 7.2943          | 0.0010   |
+| [LastFM](https://snap.stanford.edu/data/feather-lastfm-social.html) | 7,624   | 27,806  | False       | 7.2943          | 0.0010   |
 | [ca-HepPh](http://snap.stanford.edu/data/ca-HepPh.html)      | 12,008   | 118,521  | False       | 19.74          | 0.0016   |
 | [ca-CondMat](http://snap.stanford.edu/data/ca-CondMat.html)  | 23,133   | 93,497   | False       | 8.08           | 0.0003   |
 | [soc-Epinions1](http://snap.stanford.edu/data/soc-Epinions1.html) | 75,879   | 508,837  | True        | 13.41          | 8.8e−05  |
