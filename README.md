@@ -90,7 +90,7 @@ The specific way the function is called is shown in the following file
   shortest path: '"g.distances(source = ig_node_list,weights=[1]*len(g.es))"'
   connected components: '"g.connected_components()"'
   k-core: '"g.coreness()"'
-  closeness: '"g.closeness_centrality(g, weights=[1]*len(g.es), sources = ig_node_list)"'
+  closeness: '"g.closeness_centrality(weights=[1]*len(g.es), sources = ig_node_list)"'
   betweenness(directed): '"g.betweenness(directed=True, weights=[1]*len(g.es))"'
   betweenness(undirected): "'g.betweenness(directed=False, weights=[1]*len(g.es))'"
 
