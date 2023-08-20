@@ -1,5 +1,5 @@
-import igraph as ig 
-import easygraph as eg
+# import igraph as ig 
+# import easygraph as eg
 from benchmark import benchmark
 import random
 import numpy as np
@@ -53,30 +53,37 @@ if __name__ == "__main__":
             
             g = read_graph(nx.Graph(), filename)
 
-            # node_num: sample node for dijkstra
-            node_num = 100
-            start_idx, end_idx = 0, len(g.nodes)-1
-            random_node_index_list = random_nodes(node_num, start_idx, end_idx)
-            nodes = list(g.nodes)
-            nx_node_list = []
 
-            for index in random_node_index_list:
-                nx_node_list.append(nodes[index])
-
-            # if "_lcc" not in file:
-            print("Profiling shortest path")
+            print("Profiling pagerank")
             print("=======================")
             print()
 
-            for node in nx_node_list:
-                benchmark('nx.shortest_path(g, source = node)', globals=globals(), n=n)
+            benchmark('nx.pagerank(g,alpha=0.85)', globals=globals(), n=n)
+            
+            # # node_num: sample node for dijkstra
+            # node_num = 1000
+            # start_idx, end_idx = 0, len(g.nodes)-1
+            # random_node_index_list = random_nodes(node_num, start_idx, end_idx)
+            # nodes = list(g.nodes)
+            # nx_node_list = []
+
+            # for index in random_node_index_list:
+            #     nx_node_list.append(nodes[index])
+
+            # # if "_lcc" not in file:
+            # print("Profiling shortest path")
+            # print("=======================")
+            # print()
+
+            # for node in nx_node_list:
+            #     benchmark('nx.shortest_path(g, source = node)', globals=globals(), n=n)
 
 
-            print("========k-core=======")
-            print("=================")
-            print()
-            g.remove_edges_from(nx.selfloop_edges(g))
-            benchmark('nx.core_number(g)', globals=globals(), n=n)
+            # print("========k-core=======")
+            # print("=================")
+            # print()
+            # g.remove_edges_from(nx.selfloop_edges(g))
+            # benchmark('nx.core_number(g)', globals=globals(), n=n)
         
         
         # filename = filepath + file
