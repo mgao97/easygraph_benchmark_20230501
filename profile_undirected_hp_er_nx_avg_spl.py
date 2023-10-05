@@ -1,5 +1,5 @@
 # Read the text file
-with open('your_file.txt', 'r') as file:
+with open('scholat_spl.txt', 'r') as file:
     content = file.read()
 
 # Split the content into lines
